@@ -1,0 +1,72 @@
+.section-indents {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.team-title,
+.portfolio-title,
+.partners-title {
+    margin-bottom: 50px;
+}
+
+.studio-title, 
+.portfolio-title, 
+.team-title,
+.name-title,
+.partners-title {
+    color: var(--title-color);    
+}
+
+.studio-title {
+    @include font(700, 14px, 1.2);
+    // font-weight: 700;
+    // font-size: 14px;
+    // line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.studio-text {
+    @include font(400, 14px, 1.7);
+    // font-weight: 400;
+    // font-size: 14px;
+    // line-height: 1.7;
+    letter-spacing: 0.03em;
+}
+.name-text {
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.team-title,
+.portfolio-title,
+.partners-title {
+    @include font(700, 36px, 1.2);
+    // font-weight: 700;
+    // font-size: 36px;
+    // line-height: 1.2;
+    text-align: center;
+}
+.name-title {
+    @include font(500, 16px, 1.2);
+    // font-weight: 500;
+    // font-size: 16px;
+    // line-height: 1.2;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Portfolio text */
+
+.portfolio-text h2 {
+    color: var(--title-color);
+    @include font(700, 18px, 2);
+    // font-weight: 700;
+    // font-size: 18px;
+    // line-height: 2;
+    letter-spacing: 0.06em;
+}
+.portfolio-text .portfolio-cards-paragraph {
+    color: var(--primary-text-color);
+    font-size: 16px;
+    line-height: 1.8;   
+}

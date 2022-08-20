@@ -1,0 +1,15 @@
+.portfolio-list {
+    display: flex;
+    
+    
+    & .items {
+        position: relative;
+        & + .items {
+            margin-left: 30px;
+        }
+    }
+}
+
+.portfolio {
+    padding-bottom: 94px;
+}
