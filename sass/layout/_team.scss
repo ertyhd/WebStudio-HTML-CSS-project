@@ -1,16 +1,19 @@
 .team {
     background-color: var(--secondery-light-color);
 }
-.enployees {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+.team-title {
+margin-bottom: 50px;
 }
 .enployees-cards {
-    flex-basis: calc((100% - 90px) / 4);
+    
+    // flex-basis: calc((100% - 90px) / 4);
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+}
+.enployees-cards img {
+    width: 100%;
+    height: auto;
 }
 .enployees-cards-text {
     padding-top: 30px;
@@ -23,7 +26,9 @@
     gap: 10px;
 }
 .social-list-links {
-    @extend %align;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -38,5 +43,31 @@
         background-color: var(--primary-accent);
         fill: var(--third-light-color);
         border: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .team-title {
+    margin-bottom: 30px;
+    }
+    .enployees {
+        display: block;
+    }
+    .enployees-cards:not(:first-child) {
+        margin-top: 30px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .enployees {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .enployees {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
     }
 }

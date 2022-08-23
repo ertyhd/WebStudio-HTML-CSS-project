@@ -1,15 +1,27 @@
-.portfolio-list {
-    display: flex;
-    
-    
-    & .items {
-        position: relative;
-        & + .items {
-            margin-left: 30px;
+@media screen and (max-width: 767px) {
+    .portfolio {
+        display: none;
+    }    
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .portfolio {
+        display: none;
+    }    
+}
+@media screen and (min-width: 1200px) {
+    .portfolio-title{
+        margin-bottom: 50px;
+    }
+    .portfolio-list {
+        display: flex;
+        & .items {
+            position: relative;
+            & + .items {
+                margin-left: 30px;
+            }
         }
     }
-}
-
-.portfolio {
-    padding-bottom: 94px;
+    .portfolio {
+        padding-bottom: 94px;
+    }
 }

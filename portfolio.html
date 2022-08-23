@@ -21,7 +21,7 @@
       <!-- Navigation -->
       <div class="container header__container">
         <nav class="page-nav">
-          <a href="./index.html" class="logo"
+          <a href="./index.html" class="logo logo_header"
             ><span class="accent">Web</span><span class="logo_theme-dark">Studio</span></a
           >
           <ul class="list site-nav">
@@ -34,18 +34,23 @@
             <li class="site-nav__items"><a href="" class="link">Контакты</a></li>
           </ul>
         </nav>
+        <button type="button" class="mobile-menu-open" data-menu-open>
+          <svg class="mobile-menu-open__icon" width="40" height="40">
+            <use href="./images/sprite.svg#menu_40px"></use>
+          </svg>
+        </button>
         <ul class="list header-contacts">
           <li class="header-contacts__items">
             <a href="mailto:info@devstudio.com" class="link header-contacts__link"
-              ><svg class="header-contact__icon" width="16px" height="12px">
+              ><svg class="header-contact__icon-email">
                 <use href="./images/sprite.svg#icon-envelope"></use>
               </svg>
-              @devstudio.com
+              info@devstudio.com
             </a>
           </li>
           <li class="header-contacts__items">
             <a href="tel:+380961111111" class="link header-contacts__link">
-              <svg class="header-contact__icon" width="10px" height="16px">
+              <svg class="header-contact__icon-tel">
                 <use href="./images/sprite.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -53,10 +58,42 @@
           </li>
         </ul>
       </div>
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+          <button class="mobile-menu__close-btn" data-menu-close>
+            <svg class="mobile-menu__close-icon" width="40" height="40">
+              <use href="./images/sprite.svg#close_40px"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu-nav">
+            <li class="list mobile-menu-nav__item">
+              <a href="./index.html" class="link">Студия</a>
+            </li>
+            <li class="list mobile-menu-nav__item">
+              <a href="./portfolio.html" class="link current">Портфолио</a>
+            </li>
+            <li class="list mobile-menu-nav__item"><a href="" class="link">Контакты</a></li>
+          </ul>
+          <ul class="mobile-menu-contacts">
+            <li class="list mobile-menu-contacts__tel">
+              <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+            </li>
+            <li class="list mobile-menu-contacts__email">
+              <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
+            </li>
+          </ul>
+          <ul class="mobile-menu-social">
+            <li class="list mobile-menu-social__items"><a href="" class="link">Instagram</a></li>
+            <li class="list mobile-menu-social__items"><a href="" class="link">Twitter</a></li>
+            <li class="list mobile-menu-social__items"><a href="" class="link">Facebook</a></li>
+            <li class="list mobile-menu-social__items"><a href="" class="link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
     </header>
     <!-- Main container -->
     <main>
-      <section class="section-indents">
+      <section class="section-indents_portfolio">
         <div class="container filter">
           <h1 class="hidden-title">Портфолио</h1>
           <ul class="list portfolio-buttons-list">
@@ -73,12 +110,34 @@
               <div class="portfolio-cards-links">
                 <a class="portfolio-cards-link" href="">
                   <div class="portfolio-cards-wrapper">
-                    <img
-                      src="./images/portfolioimages/technocrack-min.jpg"
-                      alt="Ноутбук с тремя фотографиями"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/desktop/technocrack-1x-370-min.jpg 1x,
+                          ./images/desktop/technocrack-2x-370-min.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/tablet/technocrack-min-1x.jpg 1x,
+                          ./images/tablet/technocrack-min-2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/mobile/technocrack-min-1x.jpg 1x,
+                          ./images/mobile/technocrack-min-2x.jpg 2x
+                        "
+                        media="(max-width: 480px)"
+                      />
+                      <img
+                        src="./images/portfolioimages/technocrack-min.jpg"
+                        alt="Ноутбук с тремя фотографиями"
+                      />
+                    </picture>
+
                     <p class="portfolio-owerlay">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -96,12 +155,33 @@
               <div class="portfolio-cards-links">
                 <a class="portfolio-cards-link" href="">
                   <div class="portfolio-cards-wrapper">
-                    <img
-                      src="./images/portfolioimages/poster-min.jpg"
-                      alt="Постер с баскетболистами"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/desktop/poster-1x-370-min.jpg 1x,
+                          ./images/desktop/poster-2x-370-min.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/tablet/poster-min-1x.jpg 1x,
+                          ./images/tablet/poster-min-2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/mobile/poster-min-1x.jpg 1x,
+                          ./images/mobile/poster-min-2x.jpg 2x
+                        "
+                        media="(max-width: 480px)"
+                      />
+                      <img
+                        src="./images/portfolioimages/poster-min.jpg"
+                        alt="Постер с баскетболистами"
+                      />
+                    </picture>
                     <p class="portfolio-owerlay">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -119,12 +199,33 @@
               <div class="portfolio-cards-links">
                 <a class="portfolio-cards-link" href="">
                   <div class="portfolio-cards-wrapper">
-                    <img
-                      src="./images/portfolioimages/seafood-min.jpg"
-                      alt="Логотип ресторана морской кухни"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/desktop/seafood-1x-370-min.jpg 1x,
+                          ./images/desktop/seafood-2x-370-min.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/tablet/seafood-min-1x.jpg 1x,
+                          ./images/tablet/seafood-min-2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/mobile/seafood-min-1x.jpg 1x,
+                          ./images/mobile/seafood-min-2x.jpg 2x
+                        "
+                        media="(max-width: 480px)"
+                      />
+                      <img
+                        src="./images/portfolioimages/seafood-min.jpg"
+                        alt="Логотип ресторана морской кухни"
+                      />
+                    </picture>
                     <p class="portfolio-owerlay">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -142,12 +243,30 @@
               <div class="portfolio-cards-links">
                 <a class="portfolio-cards-link" href="">
                   <div class="portfolio-cards-wrapper">
-                    <img
-                      src="./images/portfolioimages/prime-min.jpg"
-                      alt="Наушники"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/desktop/prime-1x-370-min.jpg 1x,
+                          ./images/desktop/prime-2x-370-min.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/tablet/prime-min-1x.jpg 1x,
+                          ./images/tablet/prime-min-2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/mobile/prime-min-1x.jpg 1x,
+                          ./images/mobile/prime-min-2x.jpg 2x
+                        "
+                        media="(max-width: 480px)"
+                      />
+                      <img src="./images/portfolioimages/prime-min.jpg" alt="Наушники" />
+                    </picture>
                     <p class="portfolio-owerlay">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -165,12 +284,30 @@
               <div class="portfolio-cards-links">
                 <a class="portfolio-cards-link" href="">
                   <div class="portfolio-cards-wrapper">
-                    <img
-                      src="./images/portfolioimages/boxes-min.jpg"
-                      alt="Две коробки"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/desktop/boxes-1x-370-min.jpg 1x,
+                          ./images/desktop/boxes-2x-370-min.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/tablet/boxes-min-1x.jpg 1x,
+                          ./images/tablet/boxes-min-2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/mobile/boxes-min-1x.jpg 1x,
+                          ./images/mobile/boxes-min-2x.jpg 2x
+                        "
+                        media="(max-width: 480px)"
+                      />
+                      <img src="./images/portfolioimages/boxes-min.jpg" alt="Две коробки" />
+                    </picture>
                     <p class="portfolio-owerlay">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -188,12 +325,33 @@
               <div class="portfolio-cards-links">
                 <a class="portfolio-cards-link" href="">
                   <div class="portfolio-cards-wrapper">
-                    <img
-                      src="./images/portfolioimages/inspiration-min.jpg"
-                      alt="Моноблок apple"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/desktop/inspiration-1x-370-min.jpg 1x,
+                          ./images/desktop/inspiration-2x-370-min.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/tablet/inspiration-min-1x.jpg 1x,
+                          ./images/tablet/inspiration-min-2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/mobile/inspiration-min-1x.jpg 1x,
+                          ./images/mobile/inspiration-min-2x.jpg 2x
+                        "
+                        media="(max-width: 480px)"
+                      />
+                      <img
+                        src="./images/portfolioimages/inspiration-min.jpg"
+                        alt="Моноблок apple"
+                      />
+                    </picture>
                     <p class="portfolio-owerlay">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -211,12 +369,30 @@
               <div class="portfolio-cards-links">
                 <a class="portfolio-cards-link" href="">
                   <div class="portfolio-cards-wrapper">
-                    <img
-                      src="./images/portfolioimages/edition-min.jpg"
-                      alt="Раскрытая книга"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/desktop/edition-1x-370-min.jpg 1x,
+                          ./images/desktop/edition-2x-370-min.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/tablet/edition-min-1x.jpg 1x,
+                          ./images/tablet/edition-min-2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/mobile/edition-min-1x.jpg 1x,
+                          ./images/mobile/edition-min-2x.jpg 2x
+                        "
+                        media="(max-width: 480px)"
+                      />
+                      <img src="./images/portfolioimages/edition-min.jpg" alt="Раскрытая книга" />
+                    </picture>
                     <p class="portfolio-owerlay">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -234,12 +410,30 @@
               <div class="portfolio-cards-links">
                 <a class="portfolio-cards-link" href="">
                   <div class="portfolio-cards-wrapper">
-                    <img
-                      src="./images/portfolioimages/lab-min.jpg"
-                      alt="Бирка с надписью"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/desktop/lab-1x-370-min.jpg 1x,
+                          ./images/desktop/lab-2x-370-min.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/tablet/lab-min-1x.jpg 1x,
+                          ./images/tablet/lab-min-2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/mobile/lab-min-1x.jpg 1x,
+                          ./images/mobile/lab-min-2x.jpg 2x
+                        "
+                        media="(max-width: 480px)"
+                      />
+                      <img src="./images/portfolioimages/lab-min.jpg" alt="Бирка с надписью" />
+                    </picture>
                     <p class="portfolio-owerlay">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -257,12 +451,30 @@
               <div class="portfolio-cards-links">
                 <a class="portfolio-cards-link" href="">
                   <div class="portfolio-cards-wrapper">
-                    <img
-                      src="./images/portfolioimages/busines-min.jpg"
-                      alt="Раскрытый ноутбук"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/desktop/busines-1x-370-min.jpg 1x,
+                          ./images/desktop/busines-2x-370-min.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/tablet/busines-min-1x.jpg 1x,
+                          ./images/tablet/busines-min-2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/mobile/busines-min-1x.jpg 1x,
+                          ./images/mobile/busines-min-2x.jpg 2x
+                        "
+                        media="(max-width: 480px)"
+                      />
+                      <img src="./images/portfolioimages/busines-min.jpg" alt="Раскрытый ноутбук" />
+                    </picture>
                     <p class="portfolio-owerlay">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -283,7 +495,7 @@
     <!-- Footer -->
     <footer class="footer incolor-section">
       <div class="container footer-container">
-        <div>
+        <div class="footer-logo-adress">
           <a href="./index.html" class="logo logo_footer"
             ><span class="accent">Web</span><span class="logo_theme-light">Studio</span></a
           >
@@ -293,7 +505,7 @@
             <a href="tel:+380961111111" class="footer-contacts__tel">+38 096 111 11 11</a>
           </address>
         </div>
-        <div class="footer-social footer-social_position">
+        <div class="footer-social footer-social__position">
           <h2 class="footer-social__title">присоединяйтесь</h2>
           <ul class="list footer-social__list">
             <li class="footer-social__items">
@@ -340,16 +552,19 @@
               />
             </label>
             <div class="footer-form__button_wrapper">
-              <button type="submit" class="footer-form__button">Подписаться</button>
-              <span class="footer-form__icon_wrapper">
-                <svg class="footer-form__icon" width="24px" height="24px">
-                  <use href="./images/sprite.svg#icon-send"></use>
-                </svg>
-              </span>
+              <button type="submit" class="footer-form__button">
+                Подписаться
+                <span class="footer-form__icon_wrapper">
+                  <svg class="footer-form__icon" width="24px" height="24px">
+                    <use href="./images/sprite.svg#icon-send"></use>
+                  </svg>
+                </span>
+              </button>
             </div>
           </div>
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

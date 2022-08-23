@@ -19,21 +19,12 @@
     display: block;
     margin-top: 9px;
 }
-.footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
+
 .logo_footer {
     display: block;
     margin-bottom: 20px;
 }
-.footer-container {
-    display: flex;
-}
-.footer-social_position {
-    margin-top: 12px;
-    margin-left: 70px;
-}
+
 .footer-social__title {
     @include font(700, 14px, 1.14);
     // font-weight: 700;
@@ -45,7 +36,9 @@
     margin-bottom: 20px;
 }
 .footer-social__links {
-    @extend %align;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -69,13 +62,7 @@
     justify-content: center;
     gap: 10px;
 }
-.footer-form_position {
-    margin-left: auto;
-    margin-top: 12px;
-}
-.footer-form__container {
-    display: flex;
-}
+
 .footer-form__title {
     @include font(700, 14px, 1.14);
     // font-weight: 700;
@@ -117,15 +104,14 @@
         border-color: var(--primary-accent);
     }
 }
+
 .footer-form__button {
     padding: 0;
     width: 200px;
     height: 50px;
     background-color: var(--primary-accent);
     border: none;
-    padding-right: 63px;
     padding-left: 29px;
-    margin-left: 12px;
     @include font(700, 16px, 1.87);
     // font-weight: 700;
     // font-size: 16px;
@@ -149,7 +135,132 @@
 
 .footer-form__icon {
     position: absolute;
-    right: 28px;
     top: 13px;
 }
 
+@media screen and (max-width: 767px) {
+    .footer {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .footer-container {
+        display: block;
+        text-align: center;
+    }
+    .footer-contacts__mail,
+    .footer-contacts__tel {
+        margin-top: 8px;
+    }
+    // .footer-social__position {
+    //     margin-top: 12px;
+    //     margin-left: 70px;
+    // }
+    .footer-social__title {
+        margin-top: 60px;
+    }
+    .footer-form__title {
+        margin-top: 60px;
+        
+    }
+    .footer-form__inpt {
+        width: 100%;
+    }
+    .footer-form__button {
+        display: flex;
+        
+        align-items: center;
+        @include font(700, 16px, 1.87);
+        // font-weight: 700;
+        // font-size: 16px;
+        // line-height: 1.87;
+    }    
+    .footer-form__button_wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .footer-form__icon {
+        margin-left: 10px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .footer {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .logo_footer {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .footer-logo-adress {
+        text-align: center;
+    }
+    .footer-social__position {
+        margin-top: 5px;
+        margin-left: 165px;
+        text-align: center;
+    }
+    .footer-form__title {
+        margin-top: 60px;
+    }
+    .footer-form_position {
+        text-align: center;
+    }
+    .footer-form__inpt {
+        width: 450px;
+    }
+    .footer-form__button {
+        display: flex;
+        
+        align-items: center;
+        @include font(700, 16px, 1.87);
+        // font-weight: 700;
+        // font-size: 16px;
+        // line-height: 1.87;
+    }    
+    .footer-form__button_wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .footer-form__icon {
+        margin-left: 10px;
+    }
+    
+}
+@media screen and (min-width: 1200px) {
+    .footer {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .footer-container {
+        display: flex;
+    }
+    .footer-social__position {
+        margin-top: 12px;
+        margin-left: 70px;
+    }
+    .footer-form_position {
+        margin-left: auto;
+        margin-top: 12px;
+    }
+    .footer-form__container {
+        display: flex;
+    }
+    .footer-form__button {
+        padding-right: 63px;
+        margin-left: 12px;
+    }
+    .footer-form__icon {
+        right: 28px;
+    }
+}
