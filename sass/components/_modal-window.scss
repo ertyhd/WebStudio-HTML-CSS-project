@@ -193,6 +193,7 @@
     .modal {
         height: auto;
         width: calc(100% - 30px);
+        max-width: 450px;
     }
     .modal-form-title {	
         @include font(700, 20px, 1.5);	
