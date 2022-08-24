@@ -49,7 +49,15 @@ margin-bottom: 50px;
     }
     
 }
-
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .partners {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .partners-title {
+        margin-bottom: 30px;
+    }
+}
 @media screen and (min-width: 1200px) {
     .partners-list-links {
         padding: 16px 32px;

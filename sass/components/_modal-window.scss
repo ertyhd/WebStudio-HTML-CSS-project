@@ -206,6 +206,9 @@
         width: 450px;
         height: 609px;
     }
+    .modal-form-check-text {	
+        @include font(400, 12px, 1.17);	
+    }
 }
 
 

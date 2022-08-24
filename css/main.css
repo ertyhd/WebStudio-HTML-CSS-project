@@ -74,23 +74,31 @@ button {
   padding-right: 15px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .container {
-    width: 480px;
+    max-width: 767px;
     margin-right: auto;
     margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .container {
     width: 768px;
     margin-right: auto;
     margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 .page {
@@ -215,6 +223,10 @@ button {
   padding-top: 48px;
   padding-bottom: 48px;
   padding-left: 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .mobile-menu__close-btn {
@@ -250,10 +262,6 @@ button {
   color: var(--primary-accent);
 }
 
-.mobile-menu-contacts__tel {
-  margin-top: 302px;
-}
-
 .mobile-menu-contacts__tel .link {
   transition-property: color;
   transition-duration: var(--transition-duration);
@@ -287,7 +295,12 @@ button {
 .mobile-menu-social {
   position: relative;
   display: flex;
-  margin-top: 64px;
+  flex-wrap: wrap;
+  margin-top: 44px;
+}
+
+.mobile-menu-social__items {
+  padding-top: 20px;
 }
 
 .mobile-menu-social__items .link {
@@ -301,7 +314,7 @@ button {
   color: var(--secondary-accent);
 }
 
-.mobile-menu-social__items:not(:last-child):after {
+.mobile-menu-social__items:not(:first-child)::before {
   content: "";
   border: 1px solid rgba(33, 33, 33, 0.2);
   width: 100%;
@@ -429,7 +442,21 @@ button {
     column-gap: 8px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-buttons-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .portfolio-buttons-list .items + .items {
+    margin-left: 8px;
+  }
+  .section-indents_portfolio {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
   .portfolio-buttons-list {
     display: flex;
     justify-content: center;
@@ -437,6 +464,10 @@ button {
   }
   .portfolio-buttons-list .items + .items {
     margin-left: 8px;
+  }
+  .section-indents_portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 .backdrop {
@@ -668,9 +699,19 @@ button {
     width: 450px;
     height: 609px;
   }
+  .modal-form-check-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 .header {
   background-color: var(--third-light-color);
+}
+
+.header_underline {
+  border: 1px solid #ECECEC;
+  width: 100%;
 }
 
 @media screen and (max-width: 767px) {
@@ -1101,12 +1142,28 @@ button {
   .enployees-cards:not(:first-child) {
     margin-top: 30px;
   }
+  .team-title,
+.portfolio-title,
+.partners-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.8;
+    text-align: center;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .enployees {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+  }
+  .team-title,
+.portfolio-title,
+.partners-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.8;
+    text-align: center;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1166,6 +1223,15 @@ button {
     align-items: center;
     justify-content: center;
     width: 210px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .partners {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .partners-title {
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1458,6 +1524,11 @@ button {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+@media screen and (max-width: 767px) {
+  .portfolio-cards-list {
+    display: block;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .portfolio-cards-text h2 {
     width: 306px;
