@@ -7,6 +7,8 @@
     width: 100%;
     height: auto;
 }
+
+
 .portfolio-cards-text {
     padding: 20px 24px;
     background-color: var(--third-light-color);
@@ -38,5 +40,14 @@
 @media screen and (min-width: 768px) and (max-width: 1199px) {
     .portfolio-cards-text h2 {
         width: 306px;
+    }
+
+    .portfolio-cards-links {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .portfolio-cards-text {
+        flex-grow: 1;
     }
 }

@@ -1527,6 +1527,14 @@ button {
   .portfolio-cards-text h2 {
     width: 306px;
   }
+  .portfolio-cards-links {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .portfolio-cards-text {
+    flex-grow: 1;
+  }
 }
 .index-owerlay {
   position: absolute;
